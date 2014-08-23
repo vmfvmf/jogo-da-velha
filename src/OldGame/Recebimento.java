@@ -27,7 +27,7 @@ public class Recebimento  implements Runnable{
     Responder resp;
     byte msg_rec[] ;
     
-    public Recebimento(Game g){
+    public Recebimento(GameNetwork g){
               this.g = g;
               ini  = new Initiater();
               resp = new Responder(g);
@@ -88,8 +88,8 @@ class Initiater {
 
 
 class Responder implements HelloListener {
-          private Game g;
-          public Responder(Game g){
+          private GameNetwork g;
+          public Responder(GameNetwork g){
                     this.g = g;
           }
     @Override
